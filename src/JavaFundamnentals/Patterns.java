@@ -6,7 +6,7 @@ public class Patterns {
     public static void main(String[] args) {
        // Scanner scn = new Scanner(System.in);
         int n = 5;
-        pattern5(n);
+        pattern6(n);
     }
     static void pattern1(int n){
         for (int i = 1; i <= n; i++)
@@ -72,6 +72,36 @@ public class Patterns {
                 stars -=2;
             }
             System.out.println();
+
+        }
+
+    }
+
+    static void pattern6(int n){
+        int temp = n+1;
+        int spaces  = 1;
+      // int stars = temp/2;
+        for(int i = 1;i<=n;i++){
+            //System.out.println(temp+" "+spaces);
+            for(int j =1; j<=temp/2; j++){
+                System.out.print("*\t");
+            }
+            for(int k = 1; k<=spaces; k++){
+                System.out.print("\t");
+            }
+            for(int j =1; j<=temp/2; j++){
+                System.out.print("*\t");
+            }
+            if(i <= temp/2){
+                spaces +=2;
+                temp -=2;
+            }
+            else {
+
+                spaces-=2;
+                temp+=2;
+            }
+                System.out.println();
 
         }
 
