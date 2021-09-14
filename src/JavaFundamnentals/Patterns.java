@@ -6,9 +6,22 @@ public class Patterns {
     public static void main(String[] args) {
        // Scanner scn = new Scanner(System.in);
         int n = 5;
-        pattern6(n);
+        pattern7(n);
     }
-    static void pattern1(int n){
+
+    public static void pattern7(int n) {
+        for(int i = 1; i<=n;i++){
+            for(int j = 1; j<i; j++){
+                System.out.print("\t");
+            }
+            for(int k =1; k ==1; k++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    static void pattern6(int n){
         for (int i = 1; i <= n; i++)
         {
             for (int j = 1; j <= i; j++) //MAGIC LOOP
@@ -19,7 +32,7 @@ public class Patterns {
         }
     }
 
-    static void pattern2(int n){
+    static void pattern5(int n){
         for (int i = 1; i <= n ; i++)
         {
             for (int j = 1; j <= n -i+1; j++)
@@ -30,7 +43,7 @@ public class Patterns {
             System.out.println();
         }
     }
-    static  void pattern3(int n){
+    static  void pattern4(int n){
         for(int i = 1; i<=n;i++){
             for(int j= 1; j<= n-i; j++){
                 System.out.print(" \t");
@@ -41,7 +54,7 @@ public class Patterns {
             System.out.println();
         }
     }
-    static void pattern4(int n){
+    static void pattern3(int n){
         for(int i =1; i<= n; i++ ){
             for(int j = 1; j<i; j++){
                 System.out.print("\t");
@@ -52,7 +65,7 @@ public class Patterns {
         }
     }
 
-    static void pattern5(int n){
+    static void pattern2(int n){
         int spaces = n/2;
         int stars  = 1;
         for(int i = 1; i<=n ;i++){
@@ -77,7 +90,7 @@ public class Patterns {
 
     }
 
-    static void pattern6(int n){
+    static void pattern1(int n){
         int temp = n+1;
         int spaces  = 1;
       // int stars = temp/2;
