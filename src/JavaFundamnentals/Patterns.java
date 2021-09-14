@@ -6,7 +6,23 @@ public class Patterns {
     public static void main(String[] args) {
        // Scanner scn = new Scanner(System.in);
         int n = 5;
-        pattern7(n);
+        pattern9(n);
+    }
+
+    public static void pattern9(int n) {
+    }
+
+    public static void pattern8(int n) {
+
+        for(int i = 1; i<=n; i++){
+            for(int j= n-1; j>=i; j--){
+                System.out.print("\t");
+            }
+            for(int k =1; k ==1; k++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 
     public static void pattern7(int n) {
