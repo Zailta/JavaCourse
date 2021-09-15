@@ -7,7 +7,82 @@ public class Patterns {
        // Scanner scn = new Scanner(System.in);
         int n = 5;
         pattern10(n);
+        pattern9(n);
+        pattern8(n);
+        pattern7(n);
+        pattern6(n);
+        pattern5(n);
+        pattern4(n);
+        pattern3(n);
+        pattern2(n);
+        pattern1(n);
+
     }
+/*
+Below are the pattern to be covered in the programs. The programs are in sequence of the functions being called:
+1. pattern10(n);
+		*
+	*		*
+*				*
+	*		*
+		*
+2. pattern9(n);
+*				*
+	*		*
+		*
+	*		*
+*				*
+3. pattern8(n);
+*
+	*
+		*
+			*
+				*
+4. pattern7(n);
+				*
+			*
+		*
+	*
+*
+5. pattern6(n);
+*
+*	*
+*	*	*
+*	*	*	*
+*	*	*	*	*
+6. pattern5(n);
+*	*	*	*	*
+*	*	*	*
+*	*	*
+*	*
+*
+7. pattern4(n);
+ 	 	 	 	*
+ 	 	 	*	*
+ 	 	*	*	*
+ 	*	*	*	*
+*	*	*	*	*
+8. pattern3(n);
+*	*	*	*	*
+	*	*	*	*
+		*	*	*
+			*	*
+				*
+9. pattern2(n);
+		*
+	*	*	*
+*	*	*	*	*
+	*	*	*
+		*
+
+10.  pattern1(n);
+*	*	*		*	*	*
+*	*				*	*
+*						*
+*	*				*	*
+*	*	*		*	*	*
+
+ */
 
     public static void pattern10(int n) {
         int os = n/2;
@@ -21,6 +96,13 @@ public class Patterns {
             0, 3
             1, 1
             2, -1
+
+            Pattern printed is as follows:
+		*
+	*		*
+*				*
+	*		*
+		*
 
              */
            for(int j = 1; j<=os;j++){
@@ -51,6 +133,31 @@ public class Patterns {
     }
 
     public static void pattern9(int n) {
+/*
+to solve cross pattern problem we take reference of graph points
+*				*
+	*		*
+		*
+	*		*
+*				*
+
+for each print point we print "*" only if i==j  or i+j ==n+1
+if we take a closer look the pattern spaces seem analogous to rt. angled two triangles facing each other
+
+ 	 	 	 	*
+ 	 	 	*	*
+ 	 	*	*	*
+ 	*	*	*	*
+*	*	*	*	*
+
+
+*
+*	*
+*	*	*
+*	*	*	*
+*	*	*	*	*
+ */
+
       for(int i = 1; i<= n; i++){
           for(int j = 1; j<=n ;j++){
               if(i+j == n+1 || i==j){
