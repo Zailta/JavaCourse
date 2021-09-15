@@ -37,6 +37,17 @@ public class Patterns {
  */
 
         for (int i = 1; i <= n; i++) {
+            /* brute force approach :
+ for(int i = 1; i<=n;i++){
+            for(int j = n; j>=i; j--){
+                System.out.print("\t");
+            }
+            for(int k =1; k ==1; k++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+ */
             for (int j = 1; j <= n; j++) {
                 if (i == j)
                     System.out.print("*\t");
