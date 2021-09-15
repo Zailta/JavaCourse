@@ -6,7 +6,25 @@ public class Patterns {
     public static void main(String[] args) {
        // Scanner scn = new Scanner(System.in);
         int n = 5;
-        pattern9(n);
+        pattern10(n);
+    }
+
+    public static void pattern10(int n) {
+        int os = n/2;
+        int is =-1;
+        for(int i = 1; i<=n;i++){
+            System.out.println(os +", "+is);
+            if(i<=n/2){
+                os--;
+                is+=2;
+            }else{
+                os++;
+                is-=2;
+            }
+
+            System.out.println();
+
+        }
     }
 
     public static void pattern9(int n) {
