@@ -13,7 +13,30 @@ public class Patterns {
         int os = n/2;
         int is =-1;
         for(int i = 1; i<=n;i++){
-            System.out.println(os +", "+is);
+            /*
+            concept for the pattern si to first print outer spaces and then inner spaces
+            Print inner and outer starts in mentioned convention:
+            2, -1
+            1, 1
+            0, 3
+            1, 1
+            2, -1
+
+             */
+           for(int j = 1; j<=os;j++){
+               System.out.print("\t");
+           }
+            System.out.print("*\t");
+           for(int k = 1; k<=is; k++){
+               System.out.print("\t");
+           }
+
+            /*
+             * If condition to ensure that for top and bottom stars the stars gets printed from the outer loop only
+             */
+            if(i>1 && i<n){
+               System.out.print("*\t");
+         }
             if(i<=n/2){
                 os--;
                 is+=2;
