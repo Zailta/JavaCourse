@@ -10,31 +10,46 @@ public class Patterns {
     }
 
     public static void pattern9(int n) {
+      for(int i = 1; i<= n; i++){
+          for(int j = 1; j<=n ;j++){
+              if(i+j == n+1 || i==j){
+                  System.out.print("*\t");
+              }
+              else {
+                  System.out.print("\t");
+              }
+          }
+          System.out.println();
+      }
     }
 
     public static void pattern8(int n) {
 
-        for(int i = 1; i<=n; i++){
-            for(int j= n-1; j>=i; j--){
-                System.out.print("\t");
-            }
-            for(int k =1; k ==1; k++){
-                System.out.print("*");
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                if (i == j)
+                    System.out.print("*\t");
+
+                else
+                    System.out.print("\t");
             }
             System.out.println();
         }
     }
 
     public static void pattern7(int n) {
-        for(int i = 1; i<=n;i++){
-            for(int j = 1; j<i; j++){
-                System.out.print("\t");
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                if (i + j == n + 1) {
+                    System.out.print("*\t");
+                } else {
+                    System.out.print("\t");
+                }
             }
-            for(int k =1; k ==1; k++){
-                System.out.print("*");
-            }
+
             System.out.println();
         }
+
     }
 
     static void pattern6(int n){
