@@ -29,6 +29,7 @@ public class Patterns {
             for (int j = 0; j <= i; j++)
             {
                 System.out.print( icj + "	");
+                //using the following formula we can predict the j+1 element in the triangle: C_(k+1)^n=(C_k^n.(n-k))/(k+1).
                 icj = (icj * (i - j)) / (j + 1);
 
             }
