@@ -6,7 +6,7 @@ public class Patterns {
     public static void main(String[] args) {
        // Scanner scn = new Scanner(System.in);
         int n = 5;
-        pattern14(n);
+        pattern15(n);
        /*
         pattern9(n);
         pattern8(n);
@@ -22,7 +22,31 @@ public class Patterns {
 
     }
 
-     public static void pattern14(int n) {
+    public static void pattern15(int n) {
+        int val = 0;
+        int spaces = n;
+        for(int i =1; i<n;i++){
+            for(int j =1; j<=i;j++){
+                System.out.print(j+"*\t");
+                val =j;
+            }
+            for(int j =1; j<=spaces; j++){
+                System.out.print("\t");
+            }
+            spaces-=2;
+
+
+            for(int k = val; k>=1;k-- ){
+                if(k ==n-1){
+                    k--;
+                }
+                System.out.print(k+"*\t");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void pattern14(int n) {
 /*
 Pattern printed:
 
