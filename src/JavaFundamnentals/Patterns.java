@@ -23,7 +23,16 @@ public class Patterns {
     }
 
      public static void pattern14(int n) {
+/*
+Pattern printed:
 
+		1
+	2	3	2
+3	4	5	4	3
+	2	3	2
+		1
+
+ */
                 int stars  =1;
                 int spaces =n/2;
                 int val =1;
