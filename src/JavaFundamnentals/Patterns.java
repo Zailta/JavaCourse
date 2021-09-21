@@ -23,6 +23,16 @@ public class Patterns {
     }
 
     public static void pattern15(int n) {
+
+
+/*
+pattern to be printed:
+
+1*						1*
+1*	2*				2*	1*
+1*	2*	3*		3*	2*	1*
+1*	2*	3*	4*	3*	2*	1*
+ */
         int val = 0;
         int spaces = n;
         for(int i =1; i<n;i++){
