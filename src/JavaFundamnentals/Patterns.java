@@ -23,12 +23,34 @@ public class Patterns {
     }
 
     public static void pattern17(int n) {
+ /*
+*	*	*	*	*	*	*
+	*	*	*	*	*
+		*	*	*
+			*
+		*	*	*
+	*	*	*	*	*
+*	*	*	*	*	*	*
+*/
+
+        int space =0;
         int stars  = 2*n-3;
-        for(int i = 1; i<=n;i++){
+        for(int i = 1; i<=2*n-3;i++){
+            for(int j =1; j<=space; j++){
+                System.out.print("\t");
+            }
             for(int j = 1; j<=stars; j++){
                 System.out.print("*\t");
             }
-            stars--;
+
+            if(i<=(2*n-3)/2 ){
+                space++;
+                stars-=2;
+            }
+            else {
+                space--;
+                stars+=2;
+            }
 
             System.out.println();
         }
