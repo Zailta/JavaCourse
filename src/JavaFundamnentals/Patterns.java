@@ -24,6 +24,7 @@ public class Patterns {
 
     public static void pattern17(int n) {
  /*
+ pattern to be printed:
 *	*	*	*	*	*	*
 	*	*	*	*	*
 		*	*	*
