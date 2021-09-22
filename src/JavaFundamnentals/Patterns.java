@@ -6,7 +6,7 @@ public class Patterns {
     public static void main(String[] args) {
        // Scanner scn = new Scanner(System.in);
         int n = 5;
-        pattern15(n);
+        pattern17(n);
        /*
         pattern9(n);
         pattern8(n);
@@ -20,6 +20,46 @@ public class Patterns {
 
         */
 
+    }
+
+
+
+    public static void pattern16(int n) {
+
+
+/*
+Pattern printed:
+		*
+		*	*
+*	*	*	*	*
+		*	*
+		*
+
+ */
+
+        int spaces = n/2;
+                int stars  =0;
+        for(int i = 0; i<=n; i++){
+            if(i == (n)/2+1) {
+                for (int j = 1; j <= spaces; j++) {
+                    System.out.print("*\t");
+                }
+            }else{
+                for (int j = 1; j <= spaces; j++) {
+                    System.out.print("\t");
+                }
+            }
+            for(int j =1;j<=stars; j++){
+                System.out.print("*\t");
+            }
+            if(i<=n/2){
+                stars++;
+            }
+            else {
+                stars --;
+            }
+            System.out.println();
+        }
     }
 
     public static void pattern15(int n) {
