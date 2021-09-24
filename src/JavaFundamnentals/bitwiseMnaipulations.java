@@ -1,12 +1,12 @@
 package JavaFundamnentals;
 
-import org.w3c.dom.ls.LSOutput;
 
-public class EvenOddUsingBitwise {
+public class bitwiseMnaipulations {
     public static void main(String[] args) {
         int n =1076;
         System.out.println(isodd(n));
         EvenorOdd(n);
+        findUnique();
     }
     public static boolean isodd(int n){
 
@@ -22,5 +22,14 @@ public class EvenOddUsingBitwise {
         else {
             System.out.println("Number is even");
         }
+    }
+    public static void findUnique(){
+        int [] arr = {2,3,4,2,3,4,5};
+        int unique = 0;
+        for(int n :arr){
+            unique^= n;
+            System.out.println(unique);
+        }
+        System.out.println(unique);
     }
 }
