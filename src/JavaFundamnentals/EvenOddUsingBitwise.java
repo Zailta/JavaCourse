@@ -16,7 +16,7 @@ public class EvenOddUsingBitwise {
     public static void EvenorOdd(int n ){
        // for odd check
         boolean check = (n&1) ==1;  // or you can try n&1 == 0 for even check.
-        if(check){
+        if(check){ // if true print number is odd else print number is even
             System.out.println("Number is odd");
        }
         else {
