@@ -1,3 +1,5 @@
+package JavaFundamnentals;
+
 import java.util.Arrays;
 
 public class SieveOfEratosthenes {
