@@ -36,7 +36,9 @@ We reduce the size of the prime array to half. We also reduce all iterations to 
                 }
             }
         }
-        System.out.println();
+
+        //print 2 separately
+        System.out.print("2 ");
         for(int i = 3; i<n;i+=2) {
             if (prime[i]){
                 System.out.print(i+ " ");
