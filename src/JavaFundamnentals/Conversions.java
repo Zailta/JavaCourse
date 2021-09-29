@@ -2,14 +2,23 @@ package JavaFundamnentals;
 
 public class Conversions {
     public static void main(String[] args) {
-        int n = 100;
-        int base = 2;
-        DecimalToAnyBase(n,base);
-        int i = AnyBaseToDecimal(n, 2);
-        System.out.println(i);
+        int n = 2;
+        int sourcebase = 2;
+        int destinationbase = 8;
+//        DecimalToAnyBase(n,base);
+        AnyBaseToAnyBase(n, sourcebase, destinationbase);
+
 
     }
-    public static void DecimalToAnyBase(int n, int b){
+
+    public static void AnyBaseToAnyBase(int n, int src, int dest) {
+        int anybasetodecimal = DecimalToAnyBase(n,src);
+        int decimaltoanybase = AnyBaseToDecimal(anybasetodecimal, dest);
+        System.out.println(decimaltoanybase);
+
+    }
+
+    public static int  DecimalToAnyBase(int n, int b){
         int sum =0;
         int p= 1;
         // write code here
@@ -21,7 +30,7 @@ public class Conversions {
 
 
         }
-        System.out.println(sum);
+        return sum;
     }
 
     public static int AnyBaseToDecimal(int n, int b){
