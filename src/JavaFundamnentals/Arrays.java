@@ -5,6 +5,40 @@ public class Arrays {
         spanOfArray();
         findElement(5);
         barChart();
+        AdditionOFArray();
+    }
+
+    public static void AdditionOFArray() {
+        int []arr = {1,2,3,};
+        int[] arr2 ={2,3};
+
+        int n3 = arr.length;
+        int n4 = arr2.length;
+        int [] sum = new int[Math.max(n3, n4)];
+        int carry  =0 ;
+
+        int n1 = arr.length-1;
+        int n2 = arr2.length-1;
+        int k = (sum.length)-1;
+
+        while(k>=0){
+          int add = carry;
+            if(n1>=0){
+                add+= arr[n1--];
+            }
+            if(n2>=0){
+                add+= arr2[n2--];
+            }
+            carry = add/10;
+            add = add%10;
+            sum[k--] = add;
+
+        }
+        if(carry>0){System.out.print(carry);}
+
+        for(int values: sum){
+            System.out.print(values);
+        }
     }
 
     private static void findElement(int d) {
@@ -31,16 +65,20 @@ public class Arrays {
         System.out.println(span); //displaying the difference between greatest and smallest element
     }
     public static void barChart(){
-        int []arr = {1,2,3,5,7,8,2}; //array declaration
+        int []arr = {1,9,2,3,5,7,8}; //array declaration
         int n = arr.length;
-        java.util.Arrays.sort(arr);
-        int max = arr[n-1];
+        int [] copy = new int[n];
+        int max= 0;
+        for (int k : arr) {
+            if (k > max) {
+                max = k;
+            }
+        }
         for(int i = max; i>=1;i--){
-            for(int j = 1; j<n;j++){
-                if(arr[j]>=i){
-                    System.out.print("*\t"  );
-                }
-                else
+            for (int k : arr) {
+                if (k >= i) {
+                    System.out.print("*\t");
+                } else
                     System.out.print("\t");
             }
             System.out.println();
