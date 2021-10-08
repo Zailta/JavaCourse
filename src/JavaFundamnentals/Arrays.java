@@ -2,10 +2,47 @@ package JavaFundamnentals;
 
 public class Arrays {
     public static void main(String[] args) {
-        spanOfArray();
-        findElement(5);
-        barChart();
-        AdditionOFArray();
+       // spanOfArray();
+        //findElement(5);
+       // barChart();
+       // AdditionOFArray();
+        SubtractionOdArray();
+    }
+
+    private static void SubtractionOdArray() {
+        int []arr = {1,2,3,};
+        int[] arr2 ={2,6,5,6};
+        int n = arr.length;
+        int n1 = arr2.length;
+        int [] difference = new int[n1];
+        int carry  =0 ;
+
+        int i = arr.length-1;
+        int j = arr2.length-1;
+        int k = (difference.length)-1;
+        while(k>=0){
+            int difelement;
+            int alv  = (i>=0?arr[i]:0);
+            if((arr2[j] + carry >= alv)){
+                 difelement = arr2[j]+carry-alv;
+                carry = 0;
+            }
+            else {
+                difelement= arr2[j]+10+carry-alv;
+                carry= -1;
+            }
+            difference[k] = difelement;
+            i--;
+            j--;
+            k--;
+        }
+        int index = 0;
+        while(index<difference.length && difference[index] == 0){
+            index++;
+        }
+        while(index<difference.length){
+            System.out.print(difference[index++]);
+        }
     }
 
     public static void AdditionOFArray() {
