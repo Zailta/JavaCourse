@@ -1,13 +1,29 @@
 package JavaFundamnentals;
 
+import java.util.Collection;
+import java.util.*;
+
 public class Arrays {
     public static void main(String[] args) {
        // spanOfArray();
         //findElement(5);
        // barChart();
        // AdditionOFArray();
-        SubtractionOdArray();
+       // SubtractionOdArray();
+        reversearr();
     }
+    private static void reversearr(){
+        int []arr = {1,2,3};
+        int n = arr.length;
+        for(int i = 0; i<n/2;i++){
+            int t = arr[i];
+           arr[i] =  arr[n-i-1];
+            arr[n-i-1] = t;
+        }
+        System.out.println(java.util.Arrays.toString(arr));
+    }
+
+
 
     private static void SubtractionOdArray() {
         int []arr = {1,2,3,};
