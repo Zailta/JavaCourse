@@ -10,9 +10,21 @@ public class Arrays {
        // barChart();
        // AdditionOFArray();
        // SubtractionOdArray();
-        int[]a = {1,2,3,4,5,6,7,8,9};
+        int[]a = {3,4,1,2,0};
         //reversearr();
-        rotatearr(a,3);
+       // rotatearr(a,3);
+        inverse(a);
+    }
+    public static void inverse(int[] a){
+        int[] inverted_array = new int[a.length];
+        for (int i = 0; i < a.length; i++)
+        {
+            int v = a[i];
+            inverted_array[v] = i;
+        }
+        for(int values: inverted_array){
+            System.out.print(values);
+        }
     }
     //part of rotate array program:
     public static void reverse(int []a , int leftindex, int rightindex){
