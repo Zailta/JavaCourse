@@ -13,8 +13,23 @@ public class Arrays {
         int[]a = {3,4,1,2,0};
         //reversearr();
        // rotatearr(a,3);
-        inverse(a);
+       // inverse(a);
+        subarray();
     }
+
+    private static void subarray() {
+        int[]a = {3,4,1};
+        for(int i = 0; i<a.length;i++){
+            for(int j = i;j<a.length;j++){
+                for(int k = i; k<=j; k++){
+                    System.out.print(a[k] +" ");
+                }
+                System.out.println();
+            }
+        }
+
+    }
+
     public static void inverse(int[] a){
         int[] inverted_array = new int[a.length];
         for (int i = 0; i < a.length; i++)
