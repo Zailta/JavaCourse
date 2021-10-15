@@ -17,7 +17,7 @@ public class Arrays {
        // subarray();
        // binarySearch(a, 3);
        // firstIndexLastIndex(a,5);
-       // invertedbarChart();
+       invertedbarChart();
     }
 
     private static void firstIndexLastIndex(int[] a, int data) {
