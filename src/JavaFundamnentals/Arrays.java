@@ -75,7 +75,7 @@ public class Arrays {
                 floor = a[mid];
             }
             else{
-                ceil=floor=a[mid];
+                System.out.println(mid);
                 return;
             }
         }
@@ -262,7 +262,29 @@ public class Arrays {
         }
 
     }
+    public static void invertedbarChart(){
+        int []arr = {3,1,0,7,5}; //array declaration
+        int n = arr.length;
+        int max= 0;
+        for (int k : arr) {
+            if (k > max) {
+                max = k;
+            }
+        }
+        for(int i =0;i<=max;i++){
+            for(int k:arr){
+                if(k<=i){
+                    System.out.print("\t");
+                }
+                else{
+                    System.out.print("*\t");
+                }
 
+            }
+            System.out.println();
+        }
+
+    }
 
     }
 
