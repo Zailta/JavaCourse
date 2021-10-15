@@ -10,11 +10,76 @@ public class Arrays {
        // barChart();
        // AdditionOFArray();
        // SubtractionOdArray();
-        int[]a = {3,4,1,2,0};
+        int[]a = {1,2,3,4,5,5,6,7,8};
         //reversearr();
        // rotatearr(a,3);
        // inverse(a);
-        subarray();
+       // subarray();
+       // binarySearch(a, 3);
+       // firstIndexLastIndex(a,5);
+       // invertedbarChart();
+    }
+
+    private static void firstIndexLastIndex(int[] a, int data) {
+        int low  = 0;
+        int high  = a.length-1;
+        int firstIndex = -1;
+        while(low<=high){
+            int mid = (low+high)/2;
+            if(data<a[mid]){
+                high= mid-1;
+
+            }
+            else if(data>a[mid]){
+                low = mid+1;
+            }
+            else{
+              firstIndex = mid;
+              high = mid-1;
+            }
+        }
+        System.out.println(firstIndex);
+         low  = 0;
+        high  = a.length-1;
+        int lastIndex = -1;
+        while(low<=high){
+            int mid = (low+high)/2;
+            if(data<a[mid]){
+                high= mid-1;
+
+            }
+            else if(data>a[mid]){
+                low = mid+1;
+            }
+            else{
+                lastIndex = mid;
+                low = mid+1;
+            }
+        }
+        System.out.println(lastIndex);
+    }
+
+    private static void binarySearch(int[] a, int data) {
+        int low  = 0;
+        int high  = a.length-1;
+        int ceil = Integer.MAX_VALUE;
+        int floor = Integer.MIN_VALUE;
+        while(low<=high){
+            int mid = (low+high)/2;
+            if(data<a[mid]){
+                high= mid-1;
+                ceil  = a[mid];
+            }
+            else if(data>a[mid]){
+                low = mid+1;
+                floor = a[mid];
+            }
+            else{
+                ceil=floor=a[mid];
+                return;
+            }
+        }
+        System.out.println("The number is between "+floor +" and "+ceil);
     }
 
     private static void subarray() {
@@ -173,8 +238,11 @@ public class Arrays {
         int span = arr[n-1] - arr[0];
         System.out.println(span); //displaying the difference between greatest and smallest element
     }
+
+
+
     public static void barChart(){
-        int []arr = {1,9,2,3,5,7,8}; //array declaration
+        int []arr = {3,1,0,7,5}; //array declaration
         int n = arr.length;
         int [] copy = new int[n];
         int max= 0;
@@ -195,4 +263,6 @@ public class Arrays {
 
     }
 
+
     }
+
