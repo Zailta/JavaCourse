@@ -170,7 +170,7 @@ public class Arrays {
 
 
     private static void SubtractionOdArray() {
-        int []arr = {1,2,3,};
+        int []arr = {1,2,3};
         int[] arr2 ={2,6,5,6};
         int n = arr.length;
         int n1 = arr2.length;
