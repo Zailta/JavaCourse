@@ -17,7 +17,30 @@ public class Arrays {
        // subarray();
        // binarySearch(a, 3);
        // firstIndexLastIndex(a,5);
-       invertedbarChart();
+      // invertedbarChart();
+        subsetsarray(a);
+    }
+
+    private static void subsetsarray(int[] arr) {
+        int n  =arr.length;
+        int limit = (int) Math.pow(2, n);
+
+        for(int i = 0; i<limit;i++){
+            int temp = i;
+            String set = "";
+            for(int j = n-1;j>=0;j--){
+                int rem = temp%2;
+                temp = temp/2;
+                if(rem == 0){
+                    set= "-\t"+set;
+                }
+                else{
+                    set = arr[j] +"\t"+set;
+                }
+
+            }
+            System.out.println (set);
+        }
     }
 
     private static void firstIndexLastIndex(int[] a, int data) {
