@@ -6,7 +6,7 @@ public class TwoDimentionalArray {
         multiplication(arr, arr);
     }
 
-    private static void multiplication(int arr[][], int arr2[][]) {
+    private static void multiplication(int[][] arr, int[][] arr2) {
        int rows  = arr.length;
       int coloumn  = arr[0].length;
        int rows1 = arr2.length;
@@ -16,7 +16,7 @@ public class TwoDimentionalArray {
             System.out.println("Invalid input");
             return;
         }
-        int product[][] = new int[rows][coloumn1];
+        int[][] product = new int[rows][coloumn1];
         for(int i = 0; i<rows; i++){
             for(int j =0; j<coloumn1;j++){
                 int sum = 0;
