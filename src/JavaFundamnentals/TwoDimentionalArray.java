@@ -5,7 +5,40 @@ public class TwoDimentionalArray {
         int[][] arr = {{1,2,3},{4,5,6},{7,8,9}};
        // multiplication(arr, arr);
       //  waveIteration(arr, 3,3);
-        spiraliteration(arr);
+        //spiraliteration(arr);
+        int [][] bin = {{1,0,1},{0,0,0},{1,1,1}};
+        exitarray(bin);
+    }
+
+    private static void exitarray(int [][]arr) {
+        int dir = 0;
+        int i = 0; int j = 0;
+        while(true){
+            dir = (dir+arr[i][j])%4;
+           switch (dir){
+                case 0: j++; break;
+                case 1: i++; break;
+                case 2: j--; break;
+                case 3: i--; break;
+            }
+
+
+
+            if(i<0){
+                i++;break;
+            }
+            else if(j<0){
+                j++; break;
+            }
+            else if(i==arr.length){
+                i--; break;
+            }
+            else if(j== arr[0].length){
+                j--; break;
+            }
+
+        }
+        System.out.println(i+" "+j);
     }
 
     private static void spiraliteration(int [][] arr) {
