@@ -12,6 +12,10 @@ public class TwoDimentionalArray {
     }
 
     private static void roateanarrayby90degree(int[][] arr) {
+        /*
+        concept : first take the transpose of the whole array.
+        Once transpose is taken reverse the array rows one by one.
+         */
         int rows  = arr.length;
         for(int  i = 0; i<rows; i++){
             for (int j = i; j< rows; j++){
