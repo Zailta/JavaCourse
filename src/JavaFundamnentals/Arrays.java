@@ -6,19 +6,19 @@ import java.util.*;
 public class Arrays {
     public static void main(String[] args) {
        // spanOfArray();
-        //findElement(5);
+        findElement(5);
        // barChart();
        // AdditionOFArray();
        // SubtractionOdArray();
         int[]a = {1,2,3,4,5,5,6,7,8};
         //reversearr();
-       // rotatearr(a,3);
+       rotatearr(a,3);
        // inverse(a);
        // subarray();
        // binarySearch(a, 3);
        // firstIndexLastIndex(a,5);
       // invertedbarChart();
-        subsetsarray(a);
+       // subsetsarray(a);
     }
 
     private static void subsetsarray(int[] arr) {
@@ -157,7 +157,7 @@ public class Arrays {
 
 
     private static void reversearr(){
-        int []arr = {1,2,3};
+        int []arr = {1,2,3, 4,5,6,7,8,8,9};
         int n = arr.length;
         for(int i = 0; i<n/2;i++){
             int t = arr[i];

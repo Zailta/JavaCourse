@@ -8,7 +8,7 @@ public class TwoDimentionalArray {
         //spiraliteration(arr);
         int [][] bin = {{1,0,1},{0,0,0},{1,1,1}};
        // exitarray(bin);
-        roateanarrayby90degree(arr);
+      //  roateanarrayby90degree(arr);
     }
 
     private static void roateanarrayby90degree(int[][] arr) {
