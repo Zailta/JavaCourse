@@ -7,7 +7,39 @@ public class TwoDimentionalArray {
       //  waveIteration(arr, 3,3);
         //spiraliteration(arr);
         int [][] bin = {{1,0,1},{0,0,0},{1,1,1}};
-        exitarray(bin);
+       // exitarray(bin);
+        roateanarrayby90degree(arr);
+    }
+
+    private static void roateanarrayby90degree(int[][] arr) {
+        int rows  = arr.length;
+        for(int  i = 0; i<rows; i++){
+            for (int j = i; j< rows; j++){
+                int temp = arr[i][j];
+                arr[i][j] = arr[j][i];
+                arr[j][i] = temp;
+            }
+        }
+        for(int i = 0; i<rows; i++){
+            int li = 0; int ri = arr[i].length-1;
+            while(li<ri){
+                int temp = arr[i][li];
+                arr[i][li] = arr[i][ri];
+                arr[i][ri] = temp;
+                li++;
+                ri--;
+            }
+
+        }
+        display(arr);
+    }
+    public static void display(int[][] arr){
+        for (int[] ints : arr) {
+            for (int j = 0; j < arr[0].length; j++) {
+                System.out.print(ints[j] + " ");
+            }
+            System.out.println();
+        }
     }
 
     private static void exitarray(int [][]arr) {
@@ -15,11 +47,11 @@ public class TwoDimentionalArray {
         int i = 0; int j = 0;
         while(true){
             dir = (dir+arr[i][j])%4;
-           switch (dir){
-                case 0: j++; break;
-                case 1: i++; break;
-                case 2: j--; break;
-                case 3: i--; break;
+            switch (dir) {
+                case 0 -> j++;
+                case 1 -> i++;
+                case 2 -> j--;
+                case 3 -> i--;
             }
 
 
