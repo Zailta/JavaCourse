@@ -9,8 +9,28 @@ public class TwoDimentionalArray {
         int [][] bin = {{1,0,1},{0,0,0},{1,1,1}};
        // exitarray(bin);
       //  roateanarrayby90degree(arr);
-        digonaltransversal(arr);
-        saddlepoint(arr);
+     //   digonaltransversal(arr);
+        //saddlepoint(arr);
+        seracharray(arr, 3);
+    }
+
+    private static void seracharray(int[][] arr, int data) {
+        int i = 0; int j = arr[0].length-1;
+        while(i <arr.length && j>=0){
+            if(data == arr[i][j]){
+                System.out.println(i);
+                System.out.println(j);
+                return;
+            }
+
+            else if(data>arr[i][j]){
+                i++;
+            }
+            else {
+                j--;
+            }
+        }
+        System.out.println("Not Found");
     }
 
     private static void saddlepoint(int[][] arr) {
@@ -29,7 +49,7 @@ public class TwoDimentionalArray {
                     break;
                 }
             }
-            if(flag == true){
+            if(flag){
                 System.out.println(arr[i][svj]);
                 return;
             }
