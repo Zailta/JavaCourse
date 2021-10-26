@@ -5,10 +5,22 @@ public class TwoDimentionalArray {
         int[][] arr = {{1,2,3},{4,5,6},{7,8,9}};
        // multiplication(arr, arr);
       //  waveIteration(arr, 3,3);
-        //spiraliteration(arr);
+      //  spiraliteration(arr);
         int [][] bin = {{1,0,1},{0,0,0},{1,1,1}};
        // exitarray(bin);
       //  roateanarrayby90degree(arr);
+        digonaltransversal(arr);
+      //  saddlepoint(arr);
+    }
+
+
+    private static void digonaltransversal(int[][] arr) {
+        int n = arr.length;
+        for(int gap = 0; gap<n;gap++){
+            for(int i = 0, j=gap; j<arr.length;j++,i++){
+                System.out.println(arr[i][j]);
+            }
+        }
     }
 
     private static void roateanarrayby90degree(int[][] arr) {
@@ -94,6 +106,7 @@ public class TwoDimentionalArray {
                 count++;
             }
             minc++;
+
 
 
             //bottom
