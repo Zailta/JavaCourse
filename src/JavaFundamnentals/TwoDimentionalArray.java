@@ -10,9 +10,32 @@ public class TwoDimentionalArray {
        // exitarray(bin);
       //  roateanarrayby90degree(arr);
         digonaltransversal(arr);
-      //  saddlepoint(arr);
+        saddlepoint(arr);
     }
 
+    private static void saddlepoint(int[][] arr) {
+        int n = arr.length;
+        for(int i = 0; i<n; i++){
+            int svj = 0;
+            for(int j = 0; j<arr[0].length;j++){
+                if(arr[i][j]< arr[i][svj]){
+                    svj = j;
+                }
+            }
+            boolean flag = true;
+            for(int k = 0;k<n;k++){
+                if(arr[k][svj] >arr[i][svj]){
+                    flag =false;
+                    break;
+                }
+            }
+            if(flag == true){
+                System.out.println(arr[i][svj]);
+                return;
+            }
+        }
+        System.out.println("Invalid input");
+    }
 
     private static void digonaltransversal(int[][] arr) {
         int n = arr.length;
