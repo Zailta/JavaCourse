@@ -4,7 +4,11 @@ public class StringandStringBuilder {
 
     public static void main(String[] args) {
         String str = "abba";
-        solution(str);
+     //   solution(str);
+        compressString(str);
+
+    }
+    public static void compressString(String str){
 
     }
 
