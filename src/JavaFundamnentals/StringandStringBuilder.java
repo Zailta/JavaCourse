@@ -3,14 +3,27 @@ package JavaFundamnentals;
 public class StringandStringBuilder {
 
     public static void main(String[] args) {
-        String str = "abba";
+        String str = "aaaabbbbba";
      //   solution(str);
         compressString(str);
 
     }
+    /*Method 1*/
     public static void compressString(String str){
-
+        StringBuilder ans = new StringBuilder();
+       for(int i = 0; i<str.length(); i++) {
+           int count=1;
+           while (i < str.length() -1 && str.charAt(i) == str.charAt(i + 1)) {
+               count++;
+               i++;
+           }
+           ans.append(str.charAt(i));
+       }
+        System.out.println(ans);
     }
+    /*
+    Method 2:
+     */
 
    public static boolean isPalindrome(String str) {
        int i = 0;
