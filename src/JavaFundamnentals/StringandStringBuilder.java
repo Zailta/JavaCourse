@@ -6,27 +6,45 @@ import java.util.Set;
 public class StringandStringBuilder {
 
     public static void main(String[] args) {
-        String str = "aaaabbbbba";
+        String str = "mOHAMMAD mANNAN bHAT";
      //   solution(str);
       //  compressString(str);
       //  compressStringSet(str);
-        compressStringAlphabetiteration(str);
+       // compressStringAlphabetiteration(str);
+        casechange(str);
 
     }
-/*
-Method 3:
- */
+
+    private static void casechange(String str) {
+       StringBuilder sb = new StringBuilder(str);
+       for(int i = 0 ; i<str.length(); i++) {
+           char ch = str.charAt(i);
+           if (ch >= 'A' && ch <= 'Z') {
+               char lc = (char) (ch -'A' +'a');
+               sb.setCharAt(i,lc);
+           }
+           else if (ch >= 'a' && ch <= 'z') {
+               char uc = (char) (ch -'a' +'A');
+               sb.setCharAt(i, uc);
+           }
+       }
+        System.out.println(sb);
+    }
+
+    /*
+    Method 3:
+     */
     private static void compressStringAlphabetiteration(String str) {
-        String ans = "";
+        StringBuilder ans = new StringBuilder();
         for(int i = 0; i<str.length(); i++){
             int count =1;
             while(i<str.length()-1 && str.charAt(i) == str.charAt(i+1)){
                 count++;
                 i++;
             }
-            ans += str.charAt(i);
+            ans.append(str.charAt(i));
             if(count>1){
-                ans+= count;
+                ans.append(count);
             }
 
         }
@@ -39,14 +57,10 @@ Method 3:
     private static void compressStringSet(String str) {
         Set<Character> set = new HashSet<>();
         for(int i = 0; i<str.length(); i++) {
-            if (!(set.contains(str.charAt(i)))) {
-                set.add(str.charAt(i));
-            }
-            else {
-                continue;
-            }
+            set.add(str.charAt(i));
+
         }
-        System.out.println(set.toString());
+        System.out.println(set);
 
 
     }
