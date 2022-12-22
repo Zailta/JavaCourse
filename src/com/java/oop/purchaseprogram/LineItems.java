@@ -10,7 +10,12 @@ public class LineItems {
     }
 
     public  int  getPrice() {
-    return product.getPrice() * quantity;
+        try {
+            return product.getPrice() * quantity;
+        }
+        catch (Exception e){
+            return 0;
+        }
     }
 
     @Override
