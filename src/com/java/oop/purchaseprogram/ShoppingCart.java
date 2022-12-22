@@ -3,13 +3,13 @@ package com.java.oop.purchaseprogram;
 import java.util.*;
 
 public class ShoppingCart {
-    private List<Product> products = new ArrayList<>();
+    private List<LineItems> products = new ArrayList<>();
 
-    public void addProduct(Product product){
+    public void addProduct(LineItems product){
         products.add(product);
     }
     public int getTotal(){
-        return products.stream().mapToInt(Product::getPrice).sum();
+        return products.stream().mapToInt(LineItems::getPrice).sum();
     }
 
     @Override
