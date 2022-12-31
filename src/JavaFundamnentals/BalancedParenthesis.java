@@ -1,15 +1,11 @@
 package JavaFundamnentals;
-
-import java.sql.SQLOutput;
-import java.util.ArrayDeque;
-import java.util.Deque;
 import java.util.Stack;
 
 public class BalancedParenthesis {
 
 
     public boolean balancedparenthesis(String str){
-        String result = null;
+
         Stack<Character> parenthesisStack = new Stack<>();
         for(int i = 0; i<str.length();i++){
             char ch = str.charAt(i);
@@ -19,19 +15,11 @@ public class BalancedParenthesis {
 
             }
             char popvalue;
-            switch (ch){
-                case ')' :
-                   popvalue=  parenthesisStack.pop();
-                    System.out.println("Encountered : "+ ch+" popping "+popvalue);
-                    break;
-                case '}' :
-                    popvalue= parenthesisStack.pop();
-                    System.out.println("Encountered : "+ ch+" popping "+popvalue);
-                    break;
-                case ']' :
-                    popvalue= parenthesisStack.pop();
-                    System.out.println("Encountered : "+ ch+" popping "+popvalue);
-                    break;
+            switch (ch) {
+                case ')', ']', '}' -> {
+                    popvalue = parenthesisStack.pop();
+                    System.out.println("Encountered : " + ch + " popping " + popvalue);
+                }
             }
 
 
