@@ -4,11 +4,10 @@ import com.java.oop.PurchaseSystem.customerDetails.Address;
 import com.java.oop.purchaseprogram.Customer;
 
 import java.awt.event.KeyListener;
-import java.util.ArrayList;
+import java.util.*;
 import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
 import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class LambdaExpressions {
@@ -68,7 +67,28 @@ public class LambdaExpressions {
         System.out.println("This is a flattened Map:");
         mergedlist.stream().flatMap(Collection::stream).forEach(System.out::println);
 
-
+        // We can also chain map and filter together and use along with a terminal
+        System.out.println("This is map and filter being used in conjunction");
+        mergedlist.stream().map(List::size).filter(integer -> integer.equals(3)).forEach(System.out::println);
+        System.out.println("This is map, reduce and filter being used in conjunction");
+        final Integer reduce = mergedlist.stream().map(List::size).filter(integer -> integer.equals(3)).reduce(0, Integer::sum);
+        System.out.println(reduce);
+        System.out.println("Random Playlist program");
+        List<String> songs = Arrays.asList("a", "b", "c", "d", "e");
+        Set<String> indexTracer = new HashSet<>();
+         Random random = new Random();
+        int asInt = 0;
+         for(int i = 0;i<songs.size() ;i++) {
+             asInt = random.ints(0, songs.size()).findAny().getAsInt();
+             if(!(indexTracer.contains(songs.get(asInt)))) {
+                 indexTracer.add(songs.get(asInt));
+                 System.out.println("Playing Now: "+songs.get(asInt));
+             }
+         }
+        System.out.println(indexTracer);
+         //shuffle elements using Collections
+        Collections.shuffle(songs);
+        System.out.println("Songs after shuffle :"+songs);
 
 
 
