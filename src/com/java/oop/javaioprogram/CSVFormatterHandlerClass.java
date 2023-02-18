@@ -40,7 +40,11 @@ public class CSVFormatterHandlerClass {
                                 return beanArray;
                             }).forEach(System.out::println);
                             final Map<String, Long> collect = beanArray.stream().collect(Collectors.groupingBy(PersonBean::getName, Collectors.counting()));
-                            System.out.println(collect);
+                                    collect.forEach((key, value) -> {
+                                                System.out.println("The name is : " + key + "\nOccurences: " + value);
+                                            }
+                                    );
+
 
 
                         } catch (IOException e) {
